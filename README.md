@@ -179,8 +179,7 @@ Samuel Adams McGuire - samuelmcguire@engineer.com
 
 Pypi Link: [https://pypi.org/project/samssimplescraper/0.0.2/](https://pypi.org/project/samssimplescraper/0.1.0/)
 
-Linkedin: [LinkedIn][https://www.linkedin.com/in/samuel-mcguire/]
-
+Linkedin: [LinkedIn](https://www.linkedin.com/in/samuel-mcguire/)
 
 Project Link: [https://github.com/SamuelAdamsMcGuire/simplescraper](https://github.com/SamuelAdamsMcGuire/simplescraper)
 
