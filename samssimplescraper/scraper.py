@@ -8,7 +8,10 @@ import pickle
 import random
 import datetime
 import requests
+from tqdm import tqdm
 
+HEADER = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) \
+    AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
 
 class Scraper():
     '''
@@ -17,10 +20,13 @@ class Scraper():
     for later inspection.
     '''
 
-    def __init__(self, link_list, root_url, header):
+    def __init__(self, link_list, root_url, folders=False, header=HEADER):
         self.link_list = link_list
         self.root_url = root_url
         self.header = header
+        if folders==False:
+            os.makedirs('./data/pickled_lists/', exist_ok=True)
+            os.makedirs('./data/scraped_html/', exist_ok=True)
 
     def get_html(self):
         '''
@@ -28,7 +34,7 @@ class Scraper():
         '''
         bad_links=[]
         finished_links = os.listdir('./data/scraped_html')
-        for link in self.link_list:
+        for link in tqdm(self.link_list):
             page_name = re.sub(self.root_url, '', link)[:-1]
             if f'{page_name}.html' in finished_links:
                 pass

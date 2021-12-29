@@ -81,16 +81,8 @@ Option 1 is to clone the repo and use the code but the simpler approach would be
 
 Install `pip` package
   ```sh
-  pip install samssimplescraper==0.1.0
+  pip install samssimplescraper==0.1.1
   ```
-
-At this point in order to use the method `get_html()` please have the following folder structure inside of your project folder:
-```
-─ data
-   ├── scraped_html
-   └── pickled_lists # this is optional
-─ scraper.py
-```
                 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -103,7 +95,7 @@ The package has two modules.
 1. `sitemapscraper` is used to scrape sitemaps and can also scrape further levels of sub-sitemaps The methods will return lists of the scraped links that can be used to scrape the wanted links.
 2. `scraper` is used to scrape the the list that is returned from the sitemapscraper or a user-made list of links. There is also a method that returns a status check of how many links have been scraped of the total. 
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<!-- to do:_For more examples, please refer to the [Documentation](https://example.com)_-->
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -133,21 +125,19 @@ final_links = links_retriever.get_next_links(links=mainpage_links, tag='loc')
 ```python 
 import pickle
 
-with open('./data/pickled_lists/cleaned_links_list.pkl', 'wb') as fp:
+# the data folder is automatically created when LinksRetriever is instantiated
+with open('./data/pickled_lists/sitemap_links_list.pkl', 'wb') as fp:
         pickle.dump(final_links, fp)
 ```
 
-3. At this point the folder structure above is vital. Otherwise the program will return errors. I have plans to make this automated when I have a chance. Now you can scrape the list of links that the `LinksRetriever` module has produced for you. The files will be saved in the `data` folder.
+3. Now you can scrape the list of links that the `LinksRetriever` module has produced for you. The files will be saved in the `data/scraped_html` folder.
 
 ```python
 from samssimplescraper import Scraper
 
-# define a header to mask your scraper as a browswer
-HEADER = <define a browser header>
 # pass the list of links and for naming purposes the root_url
-Scraper.get_html(link_list=more_links, root_url='https://www.example.com/, headers=HEADER)
+Scraper.get_html(link_list=final_links, root_url='https://www.example.com/)
 ``` 
-
 
 See the [open issues](https://github.com/SamuelAdamsMcGuire/simplescraper/issues) for a full list of proposed features (and known issues).
 
@@ -156,6 +146,8 @@ See the [open issues](https://github.com/SamuelAdamsMcGuire/simplescraper/issues
 
 <!-- CONTRIBUTING -->
 ## Contributing
+
+I plan on improving the docstrings or making more detailed documentation as time permits. 
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -184,7 +176,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Samuel Adams McGuire - samuelmcguire@engineer.com
 
-Pypi Link: [https://pypi.org/project/samssimplescraper/0.1.0/](https://pypi.org/project/samssimplescraper/0.1.0/)
+Pypi Link: [https://pypi.org/project/samssimplescraper/0.1.1/](https://pypi.org/project/samssimplescraper/0.1.1/)
 
 Linkedin: [LinkedIn](https://www.linkedin.com/in/samuel-mcguire/)
 
