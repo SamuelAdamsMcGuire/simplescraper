@@ -89,7 +89,7 @@ At this point in order to use the method `get_html()` please have the following 
 ```
 ─ data
    ├── scraped_html
-   └── pickled_lists
+   └── pickled_lists # this is optional
 ─ scraper.py
 ```
                 
@@ -127,7 +127,15 @@ links_retriever = LinksRetriever(url='https://www.example.com/sitemap_index.xml'
 # get a list of the link using .get_sitemap_links method, can also add filter
 mainpage_links = links_retriever.get_sitemap_links(tag='loc')
 # if website has more layers use the method to get the links on those pages
-more_links = links_retriever.get_next_links(links=mainpage_links, tag='loc')
+final_links = links_retriever.get_next_links(links=mainpage_links, tag='loc')
+```
+**Note:** If you are not going to continue scraping in the same script then be sure to save your list using pickle:
+
+```python 
+import pickle
+
+with open('./data/pickled_lists/cleaned_links_list.pkl', 'wb') as fp:
+        pickle.dump(final_links, fp)
 ```
 
 3. At this point the folder structure above is vital. Otherwise the program will return errors. I have plans to make this automated when I have a chance. Now you can scrape the list of links that the `LinksRetriever` module has produced for you. The files will be saved in the `data` folder.
