@@ -108,12 +108,13 @@ Install `pip` package
   pip install samssimplescraper==0.0.2
   ```
 
-At this point in order to use the method `get_html()` please have the following folder structure:
-   :file_folder: project_folder
-        - scraper.py <br>
-        - :file_folder: data <br> 
-                - :file_folder: scraped_html <br>
-                - :file_folder: pickled_lists <br>
+At this point in order to use the method `get_html()` please have the following folder structure inside of your project folder:
+```
+─ data
+   ├── scraped_html
+   └── pickled_lists
+─ scraper.py
+```
                 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
