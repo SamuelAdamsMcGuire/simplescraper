@@ -93,11 +93,7 @@ This is currently a placeholder README that will be updated with more detailed i
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* beautiful soup
-  ```sh
-  pip install beautifulsoup4
-  ```
+This program used python 3.8
 
 ### Installation
 
