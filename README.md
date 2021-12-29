@@ -177,7 +177,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Samuel Adams McGuire - samuelmcguire@engineer.com
 
-Pypi Link: [https://pypi.org/project/samssimplescraper/0.0.2/](https://pypi.org/project/samssimplescraper/0.1.0/)
+Pypi Link: [https://pypi.org/project/samssimplescraper/0.1.0/](https://pypi.org/project/samssimplescraper/0.1.0/)
 
 Linkedin: [LinkedIn](https://www.linkedin.com/in/samuel-mcguire/)
 
