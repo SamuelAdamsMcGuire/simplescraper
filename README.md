@@ -71,9 +71,7 @@ This is currently a placeholder README that will be updated with more detailed i
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `SamuelAdamsMcGuire`, `simplescraper`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description`
+After writing this program to help me scrape some sitemaps and eventually the links they scraped I though I would package it for repeated use. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -103,20 +101,19 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/samueladamsmcguire/simple_scraper.git
+Option 1 is to clone the repo and use the code but the simpler approach would be to `pip` install the package and use as needed. 
 
-2. Install `pip` packages
-   ```sh
-   npm install
-   ```
-3. Set up correct folder structure
+Install `pip` package
+  ```sh
+  pip install samssimplescraper==0.0.2
+  ```
+
+At this point in order to use the method `get_html()` please have the following folder structure:
    :file_folder: project_folder
-        - scraper.py
-        - :file_folder: data 
-                - :file_folder: scraped_html
-                - :file_folder: pickled_lists
+        - scraper.py <br>
+        - :file_folder: data <br> 
+                - :file_folder: scraped_html <br>
+                - :file_folder: pickled_lists <br>
                 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
