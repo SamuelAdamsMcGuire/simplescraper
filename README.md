@@ -23,7 +23,6 @@ This is currently a placeholder README that will be updated with more detailed i
   </a>
 
 
-
   <p align="center">
     project_description
     <br />
@@ -37,7 +36,6 @@ This is currently a placeholder README that will be updated with more detailed i
     <a href="https://github.com/SamuelAdamsMcGuire/simplescraper/issues">Request Feature</a>
   </p>
 </div>
-
 
 
 <!-- TABLE OF CONTENTS -->
@@ -67,14 +65,12 @@ This is currently a placeholder README that will be updated with more detailed i
 </details>
 
 
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
 After writing this program to help me scrape some sitemaps and eventually the links they scraped I though I would package it for repeated use. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 ### Built With
@@ -115,7 +111,6 @@ At this point in order to use the method `get_html()` please have the following 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
 <!-- USAGE EXAMPLES -->
 ## Usage
 
@@ -132,15 +127,39 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [] Feature 1
-- [] Feature 2
-- [] Feature 3
-    - [] Nested Feature
+1. Find sitemap for the site you are looking to scrape. Some tips can be found here:
+
+  [how-to-find-your-sitemap](https://writemaps.com/blog/how-to-find-your-sitemap/)
+  https://writemaps.com/blog/how-to-find-your-sitemap/
+
+2. Scrape sitemap:
+
+```python
+from samssimplescraper import LinksRetriever
+
+# instantiate LinksRetriever with the sitemap you wish to scrape
+links_retriever = LinksRetriever(url='https://www.example.com/sitemap_index.xml')
+# get a list of the link using .get_sitemap_links method, can also add filter
+mainpage_links = links_retriever.get_sitemap_links(tag='loc')
+# if website has more layers use the method to get the links on those pages
+more_links = links_retriever.get_next_links(links=mainpage_links, tag='loc')
+```
+
+3. At this point the folder structure above is vital. Otherwise the program will return errors. I have plans to make this automated when I have a chance. Now you can scrape the list of links that the `LinksRetriever` module has produced for you. The files will be saved in the `data` folder.
+
+```python
+from samssimplescraper import Scraper
+
+# define a header to mask your scraper as a browswer
+HEADER = <define a browser header>
+# pass the list of links and for naming purposes the root_url
+Scraper.get_html(link_list=more_links, root_url='https://www.example.com/, headers=HEADER)
+``` 
+
 
 See the [open issues](https://github.com/SamuelAdamsMcGuire/simplescraper/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- CONTRIBUTING -->
@@ -160,7 +179,6 @@ Don't forget to give the project a star! Thanks again!
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
 <!-- LICENSE -->
 ## License
 
@@ -169,11 +187,12 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
 <!-- CONTACT -->
 ## Contact
 
 Samuel Adams McGuire - samuelmcguire@engineer.com
+
+Pypi Link: [https://pypi.org/project/samssimplescraper/0.0.2/](https://pypi.org/project/samssimplescraper/0.0.2/)
 
 Project Link: [https://github.com/SamuelAdamsMcGuire/simplescraper](https://github.com/SamuelAdamsMcGuire/simplescraper)
 
