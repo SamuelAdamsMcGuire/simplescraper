@@ -1,18 +1,4 @@
-This is currently a placeholder README that will be updated with more detailed instructions very soon. Thanks for understanding.
-
-
 <div id="top"></div>
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![MIT License][license-shield]][https://mit-license.org/]
-![LinkedIn][linkedin-shield][https://www.linkedin.com/in/samuel-mcguire/]
 
 <h3 align="center">Simple Scraper</h3>
 
@@ -60,7 +46,6 @@ This is currently a placeholder README that will be updated with more detailed i
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -97,7 +82,7 @@ Option 1 is to clone the repo and use the code but the simpler approach would be
 
 Install `pip` package
   ```sh
-  pip install samssimplescraper==0.0.2
+  pip install samssimplescraper==0.1.0
   ```
 
 At this point in order to use the method `get_html()` please have the following folder structure inside of your project folder:
@@ -192,7 +177,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Samuel Adams McGuire - samuelmcguire@engineer.com
 
-Pypi Link: [https://pypi.org/project/samssimplescraper/0.0.2/](https://pypi.org/project/samssimplescraper/0.0.2/)
+Pypi Link: [https://pypi.org/project/samssimplescraper/0.0.2/](https://pypi.org/project/samssimplescraper/0.1.0/)
+
+Linkedin: [LinkedIn][https://www.linkedin.com/in/samuel-mcguire/]
+
 
 Project Link: [https://github.com/SamuelAdamsMcGuire/simplescraper](https://github.com/SamuelAdamsMcGuire/simplescraper)
 
