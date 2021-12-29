@@ -1,3 +1,6 @@
+This is currently a placeholder README that will be updated with more detailed instructions very soon. Thanks for understanding.
+
+
 <div id="top"></div>
 
 <!-- PROJECT SHIELDS -->
