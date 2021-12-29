@@ -12,18 +12,17 @@ This is currently a placeholder README that will be updated with more detailed i
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 [![MIT License][license-shield]][https://mit-license.org/]
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/samuel-mcguire/]
+![LinkedIn][linkedin-shield][https://www.linkedin.com/in/samuel-mcguire/]
 
+<h3 align="center">Simple Scraper</h3>
 
-
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/SamuelAdamsMcGuire/simplescraper">
     <img src="images/scraper.png" alt="Logo">
   </a>
 
-<h3 align="center">Simple Scraper</h3>
+
 
   <p align="center">
     project_description
