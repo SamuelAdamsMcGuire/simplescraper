@@ -14,9 +14,9 @@ setup(
     packages=["samssimplescraper"], 
     url="https://github.com/samueladamsmcguire/simplescraper", 
     license="MIT",
-    install_requires=['beautifulsoup4',
-                      'tqdm',                     
-                      ],
+    install_requires=['beautifulsoup4', 
+                        'tqdm'
+                        ],
     classifiers=[
         "Programming Language :: Python :: 3.8",
     ],

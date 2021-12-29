@@ -8,7 +8,6 @@ import pickle
 import random
 import datetime
 import requests
-from tqdm import tqdm
 
 
 class Scraper():
@@ -18,10 +17,10 @@ class Scraper():
     for later inspection.
     '''
 
-    def __init__(self, link_list, root_url, headers):
+    def __init__(self, link_list, root_url, header):
         self.link_list = link_list
         self.root_url = root_url
-        self.headers = headers
+        self.header = header
 
     def get_html(self):
         '''
@@ -29,7 +28,7 @@ class Scraper():
         '''
         bad_links=[]
         finished_links = os.listdir('./data/scraped_html')
-        for link in tqdm(self.link_list):
+        for link in self.link_list:
             page_name = re.sub(self.root_url, '', link)[:-1]
             if f'{page_name}.html' in finished_links:
                 pass
@@ -38,7 +37,7 @@ class Scraper():
                 url = link
                 time.sleep(random.uniform(0.6, 1.8))
                 try:
-                    page_response = requests.get(url, headers=self.headers)
+                    page_response = requests.get(url, headers=self.header)
                     if page_response.status_code == 200:
                         with open(f'./data/scraped_html/{page_name}.html', \
                            'w', encoding="utf8") as f:
