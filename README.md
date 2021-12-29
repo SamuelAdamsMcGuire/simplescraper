@@ -10,7 +10,6 @@
 
 
   <p align="center">
-    project_description
     <br />
     <a href="https://github.com/SamuelAdamsMcGuire/simplescraper"><strong>Explore the docs »</strong></a>
     <br />
