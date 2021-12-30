@@ -52,7 +52,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-After writing this program to help me scrape some sitemaps and eventually the links they scraped I though I would package it for repeated use. 
+Wrote this program to scrape some sitemaps and the following sitemap links on multiple servers. In order to save time it was pip packaged for easy repeated use. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -69,7 +69,7 @@ After writing this program to help me scrape some sitemaps and eventually the li
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is currently a placeholder README that will be updated with more detailed instructions very soon. Thanks for understanding.
+Follow the installation instructions. The docstrings have detailed explainations for use. 
 
 ### Prerequisites
 
@@ -77,11 +77,11 @@ This program used python 3.8
 
 ### Installation
 
-Option 1 is to clone the repo and use the code but the simpler approach would be to `pip` install the package and use as needed. 
+`pip` install package and use as needed. 
 
 Install `pip` package
   ```sh
-  pip install samssimplescraper==0.1.1
+  pip install samssimplescraper==0.1.2
   ```
                 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -176,7 +176,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Samuel Adams McGuire - samuelmcguire@engineer.com
 
-Pypi Link: [https://pypi.org/project/samssimplescraper/0.1.1/](https://pypi.org/project/samssimplescraper/0.1.1/)
+Pypi Link: [https://pypi.org/project/samssimplescraper/0.1.2/](https://pypi.org/project/samssimplescraper/0.1.2/)
 
 Linkedin: [LinkedIn](https://www.linkedin.com/in/samuel-mcguire/)
 

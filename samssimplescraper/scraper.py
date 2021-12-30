@@ -18,19 +18,49 @@ class Scraper():
     Scrapes a list of web links and saves them in a data folder.
     If scrape is unsuccessful the so-called bad links are saved
     for later inspection.
+
+    Parameters
+    ----------
+    link_list : list
+        List of links to scrape.
+    root_url : string
+        This string will be filtered out and the rest of the URL is
+        used to name the html files in the scarped_html folder.
+    header : dict, optional
+        Used to mask scraper as a browser to avoid being blocked
+    folders : bool, default False
+        Package depends on a defined folder strucure. This parameter
+        will create it for user unless set to True.
+
+    Attributes
+    ----------
+    Nonw
+
+    Methods
+    -------
+    get_html()
+    get_check_status()
+
+    Examples
+    -------
+    >>> scraper = Scraper(link_list=links, root_url='www.example.com')
     '''
 
     def __init__(self, link_list, root_url, folders=False, header=HEADER):
         self.link_list = link_list
         self.root_url = root_url
         self.header = header
-        if folders==False:
+        if folders is False:
             os.makedirs('./data/pickled_lists/', exist_ok=True)
             os.makedirs('./data/scraped_html/', exist_ok=True)
 
     def get_html(self):
         '''
-        loops through scraped list to scrape the each webpage in it's entirety
+        Loops through scraped list to scrape the each webpage in it's entirety.
+
+        Examples
+        --------
+        >>> scraper.get_html()
         '''
         bad_links=[]
         finished_links = os.listdir('./data/scraped_html')
@@ -67,7 +97,12 @@ class Scraper():
 
     def check_status(self):
         '''
-        Checks the progress of the scraper if scraping is being done as a background process
+        Checks the progress of the scraper if scraping is being done as a background process.
+
+        Examples
+        --------
+
+        >>> scraper.check_status()
         '''
         page_data = os.listdir('./data/scraped_html')
 
@@ -75,8 +110,8 @@ class Scraper():
         {len(page_data)} of {len(self.link_list)} pages!')
 
         try:
-            with open('./data/pickled_lists/bad_links.pkl', 'wb') as fp:
+            with open('./data/pickled_lists/bad_links.pkl', 'rb') as fp:
                 bad_links = pickle.load(fp)
             print(f'Currently there are {len(bad_links)} bad links to look into.')
-        except SyntaxError:
+        except (SyntaxError, EOFError):
             print('Currently there are 0 bad links to look into.')
