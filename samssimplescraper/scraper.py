@@ -113,5 +113,5 @@ class Scraper():
             with open('./data/pickled_lists/bad_links.pkl', 'rb') as fp:
                 bad_links = pickle.load(fp)
             print(f'Currently there are {len(bad_links)} bad links to look into.')
-        except (SyntaxError, EOFError):
+        except (SyntaxError, EOFError, FileNotFoundError):
             print('Currently there are 0 bad links to look into.')

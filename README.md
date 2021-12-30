@@ -73,7 +73,7 @@ Follow the installation instructions. The docstrings have detailed explainations
 
 ### Prerequisites
 
-This program used python 3.8
+This program uses python 3.8
 
 ### Installation
 
@@ -81,7 +81,7 @@ This program used python 3.8
 
 Install `pip` package
   ```sh
-  pip install samssimplescraper==0.1.2
+  pip install samssimplescraper==0.1.3
   ```
                 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -147,8 +147,6 @@ See the [open issues](https://github.com/SamuelAdamsMcGuire/simplescraper/issues
 <!-- CONTRIBUTING -->
 ## Contributing
 
-I plan on improving the docstrings or making more detailed documentation as time permits. 
-
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
@@ -176,7 +174,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Samuel Adams McGuire - samuelmcguire@engineer.com
 
-Pypi Link: [https://pypi.org/project/samssimplescraper/0.1.2/](https://pypi.org/project/samssimplescraper/0.1.2/)
+Pypi Link: [https://pypi.org/project/samssimplescraper/0.1.3/](https://pypi.org/project/samssimplescraper/0.1.3/)
 
 Linkedin: [LinkedIn](https://www.linkedin.com/in/samuel-mcguire/)
 
